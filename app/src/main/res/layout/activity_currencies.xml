@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    tools:context="com.mahmoudsalah.swansontask.ui.activities.currency.CurrencyActivity"
+    android:fitsSystemWindows="true">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_currencies"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        xmlns:android="http://schemas.android.com/apk/res/android">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+
+    <include
+        android:id="@+id/ll_calculator"
+        layout="@layout/layout_calculator"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"/>
+
+    <ProgressBar
+        android:id="@+id/currency_progress"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:visibility="gone"
+        android:layout_centerInParent="true"/>
+
+
+
+</RelativeLayout>

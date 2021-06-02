@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.activities.currency.MainActivity">
+
+    <TextView
+        android:id="@+id/tv_task"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Swanson Tasks!"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:textColor="@color/colorPrimary"
+        android:layout_marginTop="60dp"
+        android:textSize="15sp"/>
+
+
+
+    <TextView
+        android:id="@+id/tv_anagram"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Anagram Task!"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_task"
+        android:textColor="@color/colorPrimaryDark"
+        android:layout_marginTop="100dp"
+        android:textSize="20sp"/>
+
+
+    <LinearLayout
+        android:id="@+id/ll_anagram"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_anagram"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:layout_marginTop="20dp">
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/ed_text1"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:hint="Text1"
+            android:textColorHint="@color/colorPrimary"
+            android:textSize="12sp"
+            android:textColor="@color/colorPrimary"/>
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/ed_text2"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:hint="Text2"
+            android:textColorHint="@color/colorPrimary"
+            android:textSize="12sp"
+            android:textColor="@color/colorPrimary"/>
+
+        <TextView
+            android:id="@+id/tv_run"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Run"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_task"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="25sp"
+            android:layout_marginStart="4dp"
+            android:layout_marginEnd="4dp"
+            android:textStyle="bold"/>
+
+        <ImageView
+            android:id="@+id/iv_right"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/right"
+            android:layout_marginStart="2dp"
+            android:layout_marginEnd="2dp"
+            android:visibility="gone"/>
+
+        <ImageView
+            android:id="@+id/iv_wrong"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/wrong"
+            android:layout_marginStart="2dp"
+            android:layout_marginEnd="2dp"
+            android:visibility="gone"/>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/ll_fibonacci"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ll_anagram"
+        android:layout_marginTop="50dp"
+        android:weightSum="2">
+        <TextView
+            android:id="@+id/tv_fibonacci_loop"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.8"
+            android:text="Click to Loop!"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="20sp"
+            android:gravity="center"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/tv_fibonacci_recursive"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.2"
+            android:text="Click to Recursive!"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="20sp"
+            android:gravity="center"
+            android:textStyle="bold"/>
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/tv_fibonacci_show"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="fibonacci will go here...."
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ll_fibonacci"
+        android:textColor="@android:color/black"
+        android:layout_marginTop="20dp"
+        android:textSize="14sp"/>
+
+    <TextView
+        android:id="@+id/tv_currency"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Currency Converter Task!"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_fibonacci_show"
+        android:textColor="@color/colorPrimaryDark"
+        android:layout_marginTop="50dp"
+        android:textSize="20sp"
+        android:textStyle="bold"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
